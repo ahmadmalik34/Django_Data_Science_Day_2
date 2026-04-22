@@ -16,7 +16,6 @@ def create(request):
         if not long_url.startswith(('http://', 'https://')):
             long_url = 'https://' + long_url
 
-        # generate unique code (avoid collisions)
         code = secrets.token_urlsafe(4)
         while code in URL_MAP:
             code = secrets.token_urlsafe(4)

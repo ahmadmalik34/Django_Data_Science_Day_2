@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}URL Shortener{% endblock %}
+
+{% block content %}
+  <section style="max-width:720px;margin:32px auto;">
+    <h1>URL Shortener</h1>
+
+    {% if error %}
+      <p style="color:#b91c1c">{{ error }}</p>
+    {% endif %}
+
+    <form method="post" style="display:flex;gap:8px;align-items:center;">
+      {% csrf_token %}
+      <input name="long_url" placeholder="https://example.com/..." style="flex:1;padding:10px;border-radius:8px;border:1px solid #ddd" value="{{ long_url|default:'' }}">
+      <button type="submit" style="padding:10px 14px;border-radius:8px;background:#f28c28;color:#fff;border:none">Shorten</button>
+    </form>
+
+    {% if short_url %}
+      <p style="margin-top:16px">Short URL: <a href="{{ short_url }}" target="_blank">{{ short_url }}</a></p>
+    {% endif %}
+  </section>
+{% endblock %}
