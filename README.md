@@ -15,9 +15,9 @@
 
 ## 🎯 Overview
 
-Learn Django URL routing, form handling, and redirects by building a functional URL shortener.
+Master Django URL routing, form handling, and redirects by building a functional URL shortener.
 
-**No database. No complexity. Just pure Django magic.**
+**No database. No complexity. Pure Django magic.**
 
 ```
 Long URL:  https://example.com/this-is-a-really-long-url?param=value
